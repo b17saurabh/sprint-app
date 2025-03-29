@@ -1,0 +1,29 @@
+version: '3.8'
+services:
+  postgres:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_DB: demodb
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis
+    restart: always
+    ports:
+      - "6379:6379"
+
+  spring-app:
+    image: my-spring-app
+    depends_on:
+      - postgres
+      - redis
+    environment:
+      DB_URL: jdbc:postgresql://postgres:5432/demodb
+      DB_USERNAME: admin
+      DB_PASSWORD: admin
+      SERVER_PORT: 8080
+      REDIS_HOST: redis
