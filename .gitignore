@@ -1,0 +1,85 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+
+### STS (Spring Tool Suite) ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans/
+.sts4-cache/
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+### Logs ###
+logs/
+*.log
+spring.log
+debug.log
+test-results/
+
+### Temporary Files ###
+*.swp
+*.swo
+*~
+Thumbs.db
+.DS_Store
+*.bak
+*.orig
+*.rej
+
+### Docker ###
+.dockerignore
+docker-compose.override.yml
+
+### Environment Variables & Secrets ###
+.env
+*.env
+secrets.env
+config/application-*.yml
+config/application-*.properties
+
+### Kubernetes ###
+k8s/
+helm/
+
+### Lombok Cache ###
+.lombok/
+
+### Flyway/Migration ###
+flyway/sql/
+
+

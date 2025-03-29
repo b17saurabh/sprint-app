@@ -1,0 +1,24 @@
+server:
+  port: ${SERVER_PORT:8080} # Default to 8080 if not set
+
+spring:
+  application:
+    name: ${APP_NAME:demo}
+
+  datasource:
+    url: ${DB_URL:jdbc:postgresql://localhost:5432/demodb}
+    username: ${DB_USERNAME:admin}
+    password: ${DB_PASSWORD:admin}
+    driver-class-name: ${DB_DRIVER:org.postgresql.Driver}
+
+  jpa:
+    hibernate:
+      ddl-auto: ${HIBERNATE_DDL_AUTO:update}
+    show-sql: ${SHOW_SQL:true}
+
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+
+  flyway:
+    enabled: ${FLYWAY_ENABLED:true}
