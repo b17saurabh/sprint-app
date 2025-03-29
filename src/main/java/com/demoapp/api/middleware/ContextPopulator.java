@@ -18,6 +18,8 @@ public class CallContextFilter implements Filter {
 
             // Extract data from headers (Example)
             context.setUserId(httpRequest.getHeader("X-User-Id"));
+
+            // Add security check here move to auth middleware
             context.setAdmin("true".equalsIgnoreCase(httpRequest.getHeader("X-Admin")));
 
             chain.doFilter(request, response);
